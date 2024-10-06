@@ -1,0 +1,171 @@
+/* Custom Variables */
+:root {
+    --primary-color: #2c3e50; /* Muted dark blue */
+    --secondary-color: #f0f9ff; /* Light sky blue */
+    --accent-color: #ff9f68; /* Peachy orange for a softer accent */
+    --font-family: 'Quicksand', sans-serif; /* Friendly, rounded font */
+    --font-family-secondary: 'Merriweather', serif; /* Classic for textarea */
+  }
+  
+  body {
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    background-image: url('https://www.transparenttextures.com/patterns/food.png'); /* Light, cute graphic texture */
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .create .createContainer {
+    width: 100%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Subtle textured background */
+    background-position: center;
+  }
+  
+  .create .createContainer:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 150px;
+    height: 150px;
+    background: url('https://img.icons8.com/clouds/100/000000/airplane-take-off.png') no-repeat center center;
+    background-size: contain;
+    z-index: -1;
+  }
+  
+  .create .createContainer:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    width: 70px;
+    height: 70px;
+    background: url('https://img.icons8.com/clouds/100/000000/backpack.png') no-repeat center center;
+    background-size: contain;
+    z-index: -1;
+  }
+  
+  .create .createContainer .input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+  }
+  
+  .create .createContainer textarea {
+    border: 2px solid var(--primary-color);
+    background-color: var(--secondary-color);
+    font-family: var(--font-family-secondary);
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 12px;
+    resize: vertical;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .create .createContainer textarea:focus {
+    box-shadow: 0 0 8px rgba(44, 62, 80, 0.3);
+  }
+  
+  .picsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .picsContainer .formInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .picsContainer .formInput label {
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: var(--accent-color);
+    transition: all 0.3s ease;
+  }
+  
+  .picsContainer .formInput label:hover {
+    transform: translateY(-3px);
+  }
+  
+  .picsContainer .uploadedPictures {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .picsContainer h2 {
+    font-size: 1.6rem;
+    color: var(--accent-color);
+  }
+  
+  .input label {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+  }
+  
+  .input input {
+    font-size: 1.1rem;
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .input input:focus {
+    box-shadow: 0 0 8px rgba(44, 62, 80, 0.3);
+  }
+  
+  .create .createBtn {
+    width: 160px;
+    height: 45px;
+    border: none;
+    background: var(--accent-color);
+    border-radius: 25px;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create .createBtn:hover {
+    background-color: #e68a50;
+  }
+  
+  @media (max-width: 768px) {
+    .create .createContainer {
+      padding: 20px;
+    }
+    .picsContainer .uploadedPictures {
+      gap: 15px;
+    }
+}
